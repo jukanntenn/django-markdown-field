@@ -1,0 +1,48 @@
+[project]
+name = "django-markdown-field"
+version = "0.1.0"
+description = "A Django model field that integrates Python-Markdown for handling Markdown content"
+authors = [{ name = "jukanntenn", email = "jukanntenn@outlook.com" }]
+requires-python = ">=3.10,<3.13"
+readme = "README.md"
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+]
+keywords = ["django", "markdown", "field", "model"]
+dependencies = ["markdown>=3.7,<4"]
+
+[project.urls]
+Homepage = "https://github.com/jukanntenn/django-markdown-field"
+Issues = "https://github.com/jukanntenn/django-markdown-field/issues"
+
+[dependency-groups]
+dev = ["django>=5.1.7"]
+test = ["pytest>=8.3.4", "pytest-django>=4.9.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["markdown_field"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+DJANGO_SETTINGS_MODULE = "tests.django_settings"
+python_files = "tests.py test_*.py"
+pythonpath = "."
