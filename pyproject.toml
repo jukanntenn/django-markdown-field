@@ -1,5 +1,5 @@
 [project]
-name = "django-markdown-field"
+name = "django-md-field"
 version = "0.1.0"
 description = "A Django model field that integrates Python-Markdown for handling Markdown content"
 authors = [{ name = "jukanntenn", email = "jukanntenn@outlook.com" }]
@@ -27,8 +27,8 @@ keywords = ["django", "markdown", "field", "model"]
 dependencies = ["markdown>=3.7,<4"]
 
 [project.urls]
-Homepage = "https://github.com/jukanntenn/django-markdown-field"
-Issues = "https://github.com/jukanntenn/django-markdown-field/issues"
+Homepage = "https://github.com/jukanntenn/django-md-field"
+Issues = "https://github.com/jukanntenn/django-md-field/issues"
 
 [dependency-groups]
 dev = ["django>=5.1.7"]
@@ -46,3 +46,9 @@ minversion = "8.0"
 DJANGO_SETTINGS_MODULE = "tests.django_settings"
 python_files = "tests.py test_*.py"
 pythonpath = "."
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = true

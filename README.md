@@ -1,4 +1,4 @@
-# django-markdown-field
+# django-md-field
 
 A Django model field that integrates [Python-Markdown](https://github.com/Python-Markdown/markdown) for handling Markdown content.
 
@@ -10,7 +10,7 @@ A Django model field that integrates [Python-Markdown](https://github.com/Python
 ## Installation
 
 ```bash
-pip install django-markdown-field
+pip install django-md-field
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ pip install django-markdown-field
 
 ```python
 from django.db.models import Model
-from markdown_field.fields import MarkdownField
+from markdown_field import MarkdownField
 
 class Post(Model):
     body = MarkdownField("body")
